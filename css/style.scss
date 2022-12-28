@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+$primColor: #65dfc9;
+$SecondColor: #6cdbeb;
+$glass: white;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    h1{
+        color: #426696;
+        font-weight: 600;
+        font-size: 2rem;
+        opacity: 0.8;
+    }
+    h2,
+    p{
+        color: #658ec6;
+        font-weight: 500;
+        opacity: 0.8;
+    }
+    h3{
+        color: #426696;
+        font-weight: 500;
+        opacity: 0.8;
+    }
+}
+
+// arrière plan
+main {
+    min-height: 100vh;
+    background-image: linear-gradient(780deg, #13547a 0%, #80d0c7 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.glass {
+    background: $glass;
+    min-height: 80vh;
+    width: 80%;
+    background: linear-gradient(
+        to right bottom, 
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3) 
+    );
+    border-radius: 2rem;
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+    display: flex;
+}
+.circle1, .circle2{
+    background: $glass;
+    background: linear-gradient(
+        to right bottom, 
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.3) 
+    );
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    border-radius: 50%;
+}
+.circle1{
+    top:5%;
+    right: 5%;
+
+}
+.circle2{
+    bottom: 0;
+    left: 5%;
+}
+
+// tableau de profil
+
+.dashboard{
+
+    flex: 1;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        to right bottom, 
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3) 
+    );
+    border-radius: 2rem;
+}
+.user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.link {
+    display: flex;
+    margin: 15px 0px;
+    padding: 5px 10px;
+    h2{
+        padding: 0rem 1rem;
+    }
+}
+
+.pro{
+    width: 90%;
+    background: linear-gradient(
+        to right top,
+        #65dfc9,
+        #6cdbeb);
+    border-radius: 2rem;
+    color: $glass;
+    padding: 1.5rem;
+    position: relative;
+    h2{
+        width: 40%;
+        color:white;
+    }
+    img{
+        position: absolute;
+        top:-10%;
+        right: 10%;
+    }
+}
+
+
+
+//tableau d'activité
+.games{
+    margin: 15px 30px;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    .status{
+        margin-bottom: 3rem;
+        input{
+            background: linear-gradient(
+            to right bottom, 
+            rgba(255, 255, 255, 0.7),
+            rgba(255, 255, 255, 0.3) 
+            );
+            border: none;
+            width: 50%;
+            padding: 0.5rem;
+            border-radius: 2rem;
+        }
+    }
+    .card{
+        display: flex;
+        background: linear-gradient(
+        to left top, 
+        rgba(255, 255, 255, 0.6 ),
+        rgba(255, 255, 255, 0.2) 
+    );
+    border-radius: 1rem;
+    margin: 2rem 0rem;
+    padding: 10px;
+    box-shadow: 6px 6px 6px rgba(122, 122, 122, 0.2);
+    justify-content: space-between;
+        .card-info{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .progress{
+            background: linear-gradient(
+            to right top,
+            #65dfc9,
+            #6cdbeb);
+            width: 100%;
+            height: 25%;
+            border-radius: 1rem;
+            position: relative;
+            overflow: hidden;
+            &::after{
+                content:"";
+                width: 100%;
+                height: 100%;
+                background: rgb(236, 236, 236);
+                position: absolute;
+                left: 60%;
+            }
+        }
+        .percentage{
+            font-weight: bold;
+            background: linear-gradient(to right top, #65dfc9, #6cdbed);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    }
+
+
+}
